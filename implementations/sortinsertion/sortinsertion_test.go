@@ -1,4 +1,4 @@
-package sortselection_test
+package sortinsertion_test
 
 import (
 	"testing"

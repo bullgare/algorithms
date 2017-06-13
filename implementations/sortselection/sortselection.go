@@ -1,6 +1,6 @@
 package sortselection
 
-// Sort sorts given slice of integers with a selection sort algorythm
+// Sort sorts given slice of integers with a selection sort algorithm
 func Sort(in []int) {
 	l := len(in)
 	for i, num := range in {
