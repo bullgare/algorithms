@@ -1,4 +1,4 @@
-package sortselection
+package selection
 
 // Sort sorts given slice of integers with a selection sort algorithm
 func Sort(in []int) {

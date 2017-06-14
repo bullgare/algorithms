@@ -1,4 +1,4 @@
-package sortinsertion
+package insertion
 
 // Sort sorts given slice of integers with a insertion sort algorithm
 func Sort(in []int) {
@@ -7,10 +7,11 @@ func Sort(in []int) {
 			continue
 		}
 
-		for i, before := range in[:index - 1] {
-			if before > num {
-				in[index] = before
+		for i := index - 1; i >= 0; i -- {
+			if in[i] > num {
+				in[i + 1] = in[i]
 				in[i] = num
+			} else {
 				break
 			}
 		}

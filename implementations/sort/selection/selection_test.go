@@ -1,15 +1,15 @@
-package sortinsertion_test
+package selection_test
 
 import (
 	"testing"
 
-	"github.com/bullgare/algorithms/implementations/sortselection"
+	"github.com/bullgare/algorithms/implementations/sort/selection"
 	"github.com/bullgare/algorithms/helpers"
 )
 
 func TestEmpty(t *testing.T) {
 	var ints []int = nil
-	sortselection.Sort(ints)
+	selection.Sort(ints)
 
 	if len(ints) > 0 {
 		t.Error("Expected empty slice on empty input")
@@ -18,7 +18,7 @@ func TestEmpty(t *testing.T) {
 
 func Test1Element(t *testing.T) {
 	ints := []int{1}
-	sortselection.Sort(ints)
+	selection.Sort(ints)
 
 	if len(ints) != 1 {
 		t.Error("Expected slice with one element")
@@ -31,7 +31,7 @@ func Test1Element(t *testing.T) {
 
 func Test2Elements(t *testing.T) {
 	ints := []int{2, 1}
-	sortselection.Sort(ints)
+	selection.Sort(ints)
 
 	if len(ints) != 2 {
 		t.Error("Expected slice with 2 elements")
@@ -46,12 +46,12 @@ func Test2Elements(t *testing.T) {
 }
 
 func Test30Elements(t *testing.T) {
-	ints, err := helpers.ReadIntsFromFile("../../data/30.txt")
+	ints, err := helpers.ReadIntsFromFile("../../../data/30.txt")
 	if err != nil {
 		t.Error("Error reading file")
 	}
 
-	sortselection.Sort(ints)
+	selection.Sort(ints)
 
 	if len(ints) != 30 {
 		t.Errorf("Expected slice with 30 elements, got %d", len(ints))
